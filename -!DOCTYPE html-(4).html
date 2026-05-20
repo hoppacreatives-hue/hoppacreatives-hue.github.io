@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -977,4 +977,1476 @@
             font-size: 10rem;
             color: rgba(255,255,255,0.03);
             position: absolute;
-           
+            font-weight: 600;
+            letter-spacing: 10px;
+        }
+
+        .mice-visual-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mice-visual-inner .icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.6;
+        }
+
+        .mice-visual-inner h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .mice-visual-inner p {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            line-height: 1.7;
+        }
+
+        .mice-cta-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        /* ===== HIDDEN STAYS ===== */
+        .hidden-stays {
+            background: var(--sand);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hidden-stays::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,50 Q25,40 40,50 T70,50 T100,50' fill='none' stroke='%23c9a96e' stroke-width='0.3' opacity='0.12'/%3E%3Cpath d='M0,60 Q20,50 40,60 T80,60' fill='none' stroke='%23b8735a' stroke-width='0.2' opacity='0.1'/%3E%3C/svg%3E");
+            background-size: 200px 200px;
+            pointer-events: none;
+        }
+
+        .stays-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stay-card {
+            background: white;
+            border-radius: 2px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .stay-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+        }
+
+        .stay-card-image {
+            height: 240px;
+            background: linear-gradient(135deg, var(--deep-green) 0%, var(--forest) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stay-card-image::after {
+            content: attr(data-location);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            color: rgba(255,255,255,0.06);
+            position: absolute;
+            bottom: -10px;
+            right: 10px;
+            font-weight: 600;
+        }
+
+        .stay-card-content {
+            padding: 2rem;
+        }
+
+        .stay-card-content h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: var(--charcoal);
+        }
+
+        .stay-card-content .location {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--warm-gold);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .stay-card-content p {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .stay-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .stay-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            background: var(--ivory);
+            position: relative;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,50 Q25,40 40,50 T70,50 T100,50' fill='none' stroke='%23c9a96e' stroke-width='0.3' opacity='0.08'/%3E%3C/svg%3E");
+            background-size: 200px 200px;
+            pointer-events: none;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 2px;
+            border: 1px solid rgba(0,0,0,0.04);
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            transform: translateY(-3px);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            color: var(--warm-gold);
+            opacity: 0.3;
+            position: absolute;
+            top: 0.5rem;
+            left: 1.5rem;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--deep-green), var(--forest));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-author-info h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .testimonial-author-info span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* ===== JOURNAL / STORIES ===== */
+        .journal {
+            background: var(--sand);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .journal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,50 Q25,40 40,50 T70,50 T100,50' fill='none' stroke='%23c9a96e' stroke-width='0.3' opacity='0.1'/%3E%3Cpath d='M0,60 Q20,50 40,60 T80,60' fill='none' stroke='%23b8735a' stroke-width='0.2' opacity='0.08'/%3E%3C/svg%3E");
+            background-size: 200px 200px;
+            pointer-events: none;
+        }
+
+        .journal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .journal-card {
+            background: white;
+            border-radius: 2px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.04);
+            cursor: pointer;
+        }
+
+        .journal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+
+        .journal-card.featured {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .journal-card-image {
+            height: 220px;
+            background: linear-gradient(135deg, var(--deep-green) 0%, var(--charcoal) 100%);
+            position: relative;
+        }
+
+        .journal-card.featured .journal-card-image {
+            height: auto;
+        }
+
+        .journal-card-content {
+            padding: 1.8rem;
+        }
+
+        .journal-card .category {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--warm-gold);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .journal-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--charcoal);
+            line-height: 1.3;
+        }
+
+        .journal-card p {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        .journal-card .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.2rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--warm-gold);
+            font-weight: 600;
+            text-decoration: none;
+            transition: gap 0.3s ease;
+        }
+
+        .journal-card:hover .read-more {
+            gap: 0.8rem;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .how-it-works {
+            background: var(--ivory);
+            position: relative;
+        }
+
+        .how-it-works::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,50 Q25,40 40,50 T70,50 T100,50' fill='none' stroke='%23c9a96e' stroke-width='0.3' opacity='0.08'/%3E%3C/svg%3E");
+            background-size: 200px 200px;
+            pointer-events: none;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            right: -1.5rem;
+            width: 3rem;
+            height: 1px;
+            background: var(--warm-gold);
+            opacity: 0.4;
+        }
+
+        .step-number {
+            width: 4rem;
+            height: 4rem;
+            border: 2px solid var(--warm-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--warm-gold);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .step:hover .step-number {
+            background: var(--warm-gold);
+            color: white;
+        }
+
+        .step h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .step p {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: var(--charcoal);
+            color: white;
+            text-align: center;
+            padding: 8rem 4%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='300' height='300' viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M140,20 L160,25 L180,30 L200,35 L210,45 L215,60 L212,75 L208,90 L205,105 L208,120 L212,135 L215,150 L218,165 L220,180 L218,195 L215,210 L210,225 L205,240 L200,255 L195,270 L190,280 L180,285 L170,288 L160,290 L150,288 L140,285 L130,280 L120,275 L110,270 L100,265 L90,260 L85,250 L82,240 L80,230 L82,220 L85,210 L88,200 L90,190 L88,180 L85,170 L82,160 L80,150 L82,140 L85,130 L88,120 L90,110 L92,100 L95,90 L98,80 L100,70 L105,60 L110,50 L115,40 L120,30 L130,25 Z' fill='none' stroke='%23c9a96e' stroke-width='0.4' opacity='0.05'/%3E%3C/svg%3E");
+            background-size: 500px 500px;
+            background-position: center;
+            pointer-events: none;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255,255,255,0.6);
+            padding: 5rem 4% 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='300' height='300' viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M140,20 L160,25 L180,30 L200,35 L210,45 L215,60 L212,75 L208,90 L205,105 L208,120 L212,135 L215,150 L218,165 L220,180 L218,195 L215,210 L210,225 L205,240 L200,255 L195,270 L190,280 L180,285 L170,288 L160,290 L150,288 L140,285 L130,280 L120,275 L110,270 L100,265 L90,260 L85,250 L82,240 L80,230 L82,220 L85,210 L88,200 L90,190 L88,180 L85,170 L82,160 L80,150 L82,140 L85,130 L88,120 L90,110 L92,100 L95,90 L98,80 L100,70 L105,60 L110,50 L115,40 L120,30 L130,25 Z' fill='none' stroke='%23ffffff' stroke-width='0.3' opacity='0.03'/%3E%3C/svg%3E");
+            background-size: 400px 400px;
+            background-position: center;
+            pointer-events: none;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 300px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-links h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--warm-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            border-color: var(--warm-gold);
+            color: var(--warm-gold);
+            transform: translateY(-3px);
+        }
+
+        .social-links svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* ===== WHATSAPP FLOAT ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-float svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        .whatsapp-label {
+            position: absolute;
+            right: 70px;
+            background: var(--charcoal);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .whatsapp-float:hover .whatsapp-label {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-delay-1 { transition-delay: 0.1s; }
+        .fade-in-delay-2 { transition-delay: 0.2s; }
+        .fade-in-delay-3 { transition-delay: 0.3s; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .featured-content,
+            .mice-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .journal-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .journal-card.featured {
+                grid-column: span 1;
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+            
+            .featured-visual,
+            .mice-visual {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: var(--ivory);
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                gap: 2rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                z-index: 999;
+                transition: all 0.4s ease;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                color: var(--text-dark);
+                font-size: 1.1rem;
+                text-transform: none;
+                letter-spacing: 0.5px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .step:not(:last-child)::after {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .booking-form {
+                grid-template-columns: 1fr;
+            }
+
+            .date-group {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mice-cta-group {
+                flex-direction: column;
+            }
+
+            .heritage-pillars {
+                gap: 2rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .destinations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stays-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .not-this-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 5rem 4%;
+            }
+
+            .booking-container {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .featured-visual,
+            .mice-visual {
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="logo">HiddenZimbabwe</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#stays">Hidden Stays</a></li>
+            <li><a href="#mice">MICE</a></li>
+            <li><a href="#journal">Journal</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" class="nav-cta">Book Now</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-tag">Discover. Feel. Belong.</p>
+            <h1>Zimbabwe, as you've never felt it.</h1>
+            <p class="hero-subtitle">Hidden places. Curated moments. A journey with a pulse.</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">Explore Experiences</a>
+                <a href="#booking" class="btn btn-outline">Plan Your Escape</a>
+                <a href="https://wa.me/263787105817" target="_blank" class="btn btn-whatsapp">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.72 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('brand').scrollIntoView({behavior: 'smooth'})">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Brand Statement -->
+    <section class="brand-statement" id="about">
+        <div class="brand-statement-content fade-in">
+            <p class="section-label">The HiddenZimbabwe Way</p>
+            <h2>This is not commodity travel.<br>This is travel that feels alive.</h2>
+            <p>HiddenZimbabwe is a curated travel and MICE platform designed to help travelers discover hidden gems, meaningful stays, local culture, natural beauty, and experiences that feel personal and real. We don't do rushed sightseeing. We don't do generic tourism. We create journeys that pulse with the rhythm of the country.</p>
+            <p class="brand-quote">"Come for the discovery. Stay for the feeling of belonging."</p>
+            
+            <div class="not-this">
+                <div class="not-this-grid">
+                    <div class="not-item">
+                        <h4>This is not</h4>
+                        <p>Commodity travel or package deals</p>
+                    </div>
+                    <div class="not-item">
+                        <h4>This is not</h4>
+                        <p>Rushed sightseeing or checklist tourism</p>
+                    </div>
+                    <div class="not-item">
+                        <h4>This is not</h4>
+                        <p>Generic experiences you could find anywhere</p>
+                    </div>
+                    <div class="not-item">
+                        <h4>This is</h4>
+                        <p>Travel with depth, energy, and soul</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Experience -->
+    <section class="featured-experience" id="experiences">
+        <div class="featured-content">
+            <div class="featured-text fade-in">
+                <p class="section-label">Featured Experience</p>
+                <h2>Harare with a Pulse</h2>
+                <p>Wake up in the city. Walk with wildlife. Sip under the stars. This is Harare, just not the version most people know.</p>
+                <p>Experience the energy, culture, style, and hidden moments of Zimbabwe's capital. From premium boutique stays to Mukuvisi nature encounters, curated dining to city exploration — discover a Harare that moves with rhythm and soul.</p>
+                <ul class="featured-highlights">
+                    <li>Premium boutique accommodations in the city's most atmospheric neighborhoods</li>
+                    <li>Guided Mukuvisi woodland experiences — wildlife within city limits</li>
+                    <li>Curated culinary journeys through Harare's emerging food scene</li>
+                    <li>Hidden galleries, studios, and cultural spaces</li>
+                    <li>Sunset cocktails at rooftop bars with panoramic views</li>
+                </ul>
+                <a href="#booking" class="btn btn-primary" style="margin-top: 1rem;">View This Experience</a>
+                <a href="https://wa.me/263787105817?text=I'm%20interested%20in%20Harare%20with%20a%20Pulse" target="_blank" class="btn btn-outline" style="margin-top: 1rem; margin-left: 0.5rem;">Inquire on WhatsApp</a>
+            </div>
+            <div class="featured-visual fade-in">
+                <div class="featured-visual-inner">
+                    <span class="icon">✦</span>
+                    <p>Urban energy.<br>Natural wonder.<br>Unexpected harmony.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Booking Calendar -->
+    <section class="booking-section" id="booking">
+        <div class="section-header fade-in">
+            <p class="section-label">Plan Your Journey</p>
+            <h2 class="section-title">Book Your Escape</h2>
+            <p class="section-subtitle">Tell us what you're looking for, and we'll craft the rest. Every journey begins with a conversation.</p>
+        </div>
+        <div class="booking-container fade-in">
+            <div class="booking-header">
+                <h2>Check Availability</h2>
+                <p>Select your preferences and we'll confirm within 24 hours</p>
+            </div>
+            <form class="booking-form" id="bookingForm" onsubmit="handleBooking(event)">
+                <div class="form-group">
+                    <label>Arrival Date</label>
+                    <input type="date" name="arrival" required>
+                </div>
+                <div class="form-group">
+                    <label>Departure Date</label>
+                    <input type="date" name="departure" required>
+                </div>
+                <div class="form-group">
+                    <label>Travel Type</label>
+                    <select name="travel_type" required>
+                        <option value="">Select experience type</option>
+                        <option value="leisure">Leisure</optionI notice the code got cut off. Let me continue and complete the full updated website with all the requested features.
+
+```html
+                        <option value="couple">Couple Escape</option>
+                        <option value="family">Family</option>
+                        <option value="corporate">Corporate / MICE</option>
+                        <option value="group">Group Travel</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Number of Guests</label>
+                    <select name="guests" required>
+                        <option value="">Select guests</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3-5">3 - 5 Guests</option>
+                        <option value="6-10">6 - 10 Guests</option>
+                        <option value="10+">10+ Guests</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Destination</label>
+                    <select name="destination">
+                        <option value="">Select destination (optional)</option>
+                        <option value="harare">Harare</option>
+                        <option value="victoria-falls">Victoria Falls</option>
+                        <option value="kariba">Kariba</option>
+                        <option value="eastern-highlands">Eastern Highlands</option>
+                        <option value="great-zimbabwe">Great Zimbabwe</option>
+                        <option value="matobo">Matobo Hills</option>
+                        <option value="hidden">Hidden Escapes</option>
+                        <option value="undecided">Help me decide</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Number of Rooms</label>
+                    <select name="rooms">
+                        <option value="">Select rooms (optional)</option>
+                        <option value="1">1 Room</option>
+                        <option value="2">2 Rooms</option>
+                        <option value="3-5">3 - 5 Rooms</option>
+                        <option value="5+">5+ Rooms</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label>Your Name</label>
+                    <input type="text" name="name" placeholder="Full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone / WhatsApp</label>
+                    <input type="tel" name="phone" placeholder="+263 XXX XXX XXX" required>
+                </div>
+                <div class="form-group full-width">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Tell us what kind of escape you are looking for, and we will curate the rest."></textarea>
+                </div>
+                <div class="booking-actions">
+                    <button type="submit" class="btn btn-primary">Check Availability</button>
+                    <a href="https://wa.me/263787105817" target="_blank" class="btn btn-whatsapp">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.72 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        Book via WhatsApp
+                    </a>
+                    <a href="https://wa.me/263787105817?text=I'm%20interested%20in%20a%20MICE%20proposal" target="_blank" class="btn btn-outline" style="color: var(--charcoal); border-color: var(--charcoal);">Request MICE Proposal</a>
+                </div>
+                <p class="booking-note">No payment required. We'll confirm availability and send a curated proposal within 24 hours.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Destinations -->
+    <section class="destinations" id="destinations">
+        <div class="section-header fade-in">
+            <p class="section-label">Explore</p>
+            <h2 class="section-title">Destinations with Soul</h2>
+            <p class="section-subtitle">Every place tells a story. Every story invites you in.</p>
+        </div>
+        <div class="destinations-grid">
+            <div class="destination-card fade-in">
+                <div class="destination-card-bg" style="background: linear-gradient(135deg, #2d5a3f 0%, #1a3c2a 100%);"></div>
+                <div class="destination-card-content">
+                    <h3>Harare</h3>
+                    <p>The city that surprises you with its pulse</p>
+                </div>
+            </div>
+            <div class="destination-card fade-in">
+                <div class="destination-card-bg" style="background: linear-gradient(135deg, #3d5a80 0%, #1c1c1c 100%);"></div>
+                <div class="destination-card-content">
+                    <h3>Victoria Falls</h3>
+                    <p>Where the earth speaks in thunder and mist</p>
+                </div>
+            </div>
+            <div class="destination-card fade-in">
+                <div class="destination-card-bg" style="background: linear-gradient(135deg, #1a3c2a 0%, #4a6741 100%);"></div>
+                <div class="destination-card-content">
+                    <h3>Kariba</h3>
+                    <p>Lake silence and shoreline stories</p>
+                </div>
+            </div>
+            <div class="destination-card fade-in">
+                <div class="destination-card-bg" style="background: linear-gradient(135deg, #4a6741 0%, #2d5a3f 100%);"></div>
+                <div class="destination-card-content">
+                    <h3>Eastern Highlands</h3>
+                    <p>Mountains that hold the sky</p>
+                </div>
+            </div>
+            <div class="destination-card fade-in">
+                <div class="destination-card-bg" style="background: linear-gradient(135deg, #8b6914 0%, #5c4a1f 100%);"></div>
+                <div class="destination-card-content">
+                    <h3>Great Zimbabwe</h3>
+                    <p>Walking through living history</p>
+                </div>
+            </div>
+            <div class="destination-card fade-in">
+                <div class="destination-card-bg" style="background: linear-gradient(135deg, #5c4a1f 0%, #3d3d3d 100%);"></div>
+                <div class="destination-card-content">
+                    <h3>Matobo Hills</h3>
+                    <p>Granite whispers and ancient echoes</p>
+                </div>
+            </div>
+            <div class="destination-card fade-in" style="grid-column: 1 / -1; height: 280px;">
+                <div class="destination-card-bg" style="background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-muted) 100%);"></div>
+                <div class="destination-card-content" style="text-align: center;">
+                    <h3>Hidden Escapes</h3>
+                    <p>Places without names on maps, waiting to be felt</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why HiddenZimbabwe -->
+    <section class="why-section">
+        <div class="section-header fade-in">
+            <p class="section-label">Our Difference</p>
+            <h2 class="section-title">Why HiddenZimbabwe</h2>
+            <p class="section-subtitle">We don't just plan trips. We craft experiences that resonate.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card fade-in">
+                <span class="why-icon">◉</span>
+                <h3>Curated, Not Crowded</h3>
+                <p>Small groups. Intimate encounters. Spaces where you can breathe and truly see.</p>
+            </div>
+            <div class="why-card fade-in">
+                <span class="why-icon">◉</span>
+                <h3>Meaningful, Not Rushed</h3>
+                <p>We design for depth, not volume. Every moment has room to unfold naturally.</p>
+            </div>
+            <div class="why-card fade-in">
+                <span class="why-icon">◉</span>
+                <h3>Human, Not Transactional</h3>
+                <p>Real connections with local guides, hosts, and communities. Travel that touches both ways.</p>
+            </div>
+            <div class="why-card fade-in">
+                <span class="why-icon">◉</span>
+                <h3>Premium, Not Pretentious</h3>
+                <p>Luxury in the details — comfort, quality, and care without the unnecessary flash.</p>
+            </div>
+            <div class="why-card fade-in">
+                <span class="why-icon">◉</span>
+                <h3>Hidden, Not Obvious</h3>
+                <p>We reveal what others miss. The side streets, the local spots, the untold stories.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden Stays -->
+    <section class="hidden-stays" id="stays">
+        <div class="section-header fade-in">
+            <p class="section-label">Where You Rest</p>
+            <h2 class="section-title">Hidden Stays</h2>
+            <p class="section-subtitle">Boutique accommodations chosen for atmosphere, location, and soul. Not just a room — a place that holds you.</p>
+        </div>
+        <div class="stays-grid">
+            <div class="stay-card fade-in">
+                <div class="stay-card-image" data-location="Harare"></div>
+                <div class="stay-card-content">
+                    <span class="location">Harare</span>
+                    <h3>The Garden House</h3>
+                    <p>A restored heritage home in the leafy suburbs, where morning coffee comes with birdsong and the city feels miles away.</p>
+                    <div class="stay-meta">
+                        <span>◉ 2 Guests</span>
+                        <span>◉ Pool</span>
+                        <span>◉ Garden</span>
+                    </div>
+                </div>
+            </div>
+            <div class="stay-card fade-in">
+                <div class="stay-card-image" data-location="Eastern Highlands" style="background: linear-gradient(135deg, #4a6741 0%, #2d5a3f 100%);"></div>
+                <div class="stay-card-content">
+                    <span class="location">Eastern Highlands</span>
+                    <h3>Cloud's Edge</h3>
+                    <p>Mountain lodge where the mist rolls in at dusk and the fire never goes out. Views that silence conversation.</p>
+                    <div class="stay-meta">
+                        <span>◉ 4 Guests</span>
+                        <span>◉ Fireplace</span>
+                        <span>◉ Hiking</span>
+                    </div>
+                </div>
+            </div>
+            <div class="stay-card fade-in">
+                <div class="stay-card-image" data-location="Kariba" style="background: linear-gradient(135deg, #1a3c2a 0%, #3d5a80 100%);"></div>
+                <div class="stay-card-content">
+                    <span class="location">Kariba</span>
+                    <h3>Shoreline Silence</h3>
+                    <p>Private lakeside cottage where the only schedule is sunset. Fall asleep to water lapping and wake to fish eagles.</p>
+                    <div class="stay-meta">
+                        <span>◉ 6 Guests</span>
+                        <span>◉ Lake Access</span>
+                        <span>◉ Boat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MICE / Corporate Section -->
+    <section class="mice-section" id="mice">
+        <div class="mice-content">
+            <div class="mice-text fade-in">
+                <p class="section-label">For Organizations</p>
+                <h2>MICE & Corporate Experiences</h2>
+                <p>HiddenZimbabwe brings the same curatorial excellence to corporate travel. We design executive retreats, incentive journeys, and business events that feel less like logistics and more like transformation.</p>
+                <p>From strategy offsites in the Eastern Highlands to board dinners overlooking Lake Kariba, we handle the complexity so your team can focus on what matters.</p>
+                <ul class="mice-services">
+                    <li>Executive retreats & strategy offsites</li>
+                    <li>Corporate travel & incentive programmes</li>
+                    <li>Conferences & business events</li>
+                    <li>Premium group logistics</li>
+                    <li>Curated hosted experiences</li>
+                    <li>Boutique executive stays</li>
+                </ul>
+                <div class="mice-cta-group">
+                    <a href="https://wa.me/263787105817?text=I'm%20interested%20in%20a%20MICE%20proposal" target="_blank" class="btn btn-primary">Speak to Our MICE Team</a>
+                    <a href="https://wa.me/263787105817?text=I'd%20like%20to%20plan%20an%20executive%20retreat" target="_blank" class="btn btn-outline">Plan an Executive Retreat</a>
+                </div>
+            </div>
+            <div class="mice-visual fade-in">
+                <div class="mice-visual-inner">
+                    <span class="icon">✦</span>
+                    <h4>Enterprise-ready.<br>Atmosphere-first.</h4>
+                    <p>Serious coordination meets<br>unforgettable experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Belonging & Heritage -->
+    <section class="belonging">
+        <div class="belonging-content fade-in">
+            <p class="section-label">The Deeper Journey</p>
+            <h2>Belonging & Heritage</h2>
+            <p>Travel is not only about seeing places. It is about feeling like you belong, even briefly. Heritage is not a museum piece — it is living identity, culture, food, music, storytelling, and human connection.</p>
+            <p>At HiddenZimbabwe, we create space for these connections. We introduce you to the keepers of tradition, the innovators of culture, and the everyday people who make Zimbabwe what it is. You arrive as a visitor. You leave with a sense of home.</p>
+            
+            <div class="heritage-pillars">
+                <div class="pillar">
+                    <span class="pillar-icon">🍲</span>
+                    <span>Cuisine</span>
+                </div>
+                <div class="pillar">
+                    <span class="pillar-icon">🎵</span>
+                    <span>Music</span>
+                </div>
+                <div class="pillar">
+                    <span class="pillar-icon">📖</span>
+                    <span>Storytelling</span>
+                </div>
+                <div class="pillar">
+                    <span class="pillar-icon">🏛️</span>
+                    <span>Heritage</span>
+                </div>
+                <div class="pillar">
+                    <span class="pillar-icon">🤝</span>
+                    <span>Connection</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-header fade-in">
+            <p class="section-label">Voices</p>
+            <h2 class="section-title">What Travelers Say</h2>
+            <p class="section-subtitle">Words from those who have felt Zimbabwe differently.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <p class="testimonial-text">HiddenZimbabwe didn't just plan our trip — they revealed a side of Harare I never knew existed. The Mukuvisi walk at dawn, the gallery hidden behind an unmarked door, the dinner where we sat with strangers who became friends.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">SK</div>
+                    <div class="testimonial-author-info">
+                        <h4>Sarah K.</h4>
+                        <span>London, UK — Couple Escape</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <p class="testimonial-text">We brought our executive team for a strategy retreat in the Eastern Highlands. HiddenZimbabwe handled every detail with precision, but what struck us was the atmosphere — calm, focused, elevated. It changed how we think about offsites.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">TM</div>
+                    <div class="testimonial-author-info">
+                        <h4>Tendai M.</h4>
+                        <span>Harare — Corporate Retreat</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <p class="testimonial-text">As someone who left Zimbabwe years ago, coming back with HiddenZimbabwe felt like returning to a home I didn't know I still had. They understood what I was looking for before I did.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">JN</div>
+                    <div class="testimonial-author-info">
+                        <h4>James N.</h4>
+                        <span>Toronto, Canada — Diaspora Journey</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journal / Stories -->
+    <section class="journal" id="journal">
+        <div class="section-header fade-in">
+            <p class="section-label">Stories</p>
+            <h2 class="section-title">The HiddenZimbabwe Journal</h2>
+            <p class="section-subtitle">Notes from the field. Dispatches from places that don't make the guidebooks.</p>
+        </div>
+        <div class="journal-grid">
+            <div class="journal-card featured fade-in">
+                <div class="journal-card-image"></div>
+                <div class="journal-card-content">
+                    <span class="category">Harare</span>
+                    <h3>The Mukuvisi Walk: Wildlife Before Your Morning Coffee</h3>
+                    <p>Most visitors to Harare never know that twenty minutes from the city centre, you can walk among giraffe, zebra, and wildebeest. We spent a morning with a guide who grew up in the woodland's shadow, and learned that the boundary between city and wild is thinner than it seems.</p>
+                    <a href="#" class="read-more">Read Story →</a>
+                </div>
+            </div>
+            <div class="journal-card fade-in">
+                <div class="journal-card-image" style="background: linear-gradient(135deg, #5c4a1f 0%, #3d3d3d 100%);"></div>
+                <div class="journal-card-content">
+                    <span class="category">Heritage</span>
+                    <h3>Granite and Memory: A Morning in Matobo</h3>
+                    <p>The hills hold paintings older than recorded history. Standing before them, you understand that Zimbabwe has always been a place of human expression.</p>
+                    <a href="#" class="read-more">Read Story →</a>
+                </div>
+            </div>
+            <div class="journal-card fade-in">
+                <div class="journal-card-image" style="background: linear-gradient(135deg, #1a3c2a 0%, #3d5a80 100%);"></div>
+                <div class="journal-card-content">
+                    <span class="category">Cuisine</span>
+                    <h3>The New Harare Table</h3>
+                    <p>A generation of chefs is reimagining Zimbabwean ingredients through a global lens. We followed the trail from farm to plate.</p>
+                    <a href="#" class="read-more">Read Story →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="section-header fade-in">
+            <p class="section-label">The Process</p>
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Simple steps to an extraordinary journey</p>
+        </div>
+        <div class="steps">
+            <div class="step fade-in">
+                <div class="step-number">1</div>
+                <h3>Choose Your Experience</h3>
+                <p>Browse our curated collection of journeys, from city escapes to wilderness retreats. Find the one that speaks to you.</p>
+            </div>
+            <div class="step fade-in">
+                <div class="step-number">2</div>
+                <h3>We Curate the Flow</h3>
+                <p>Our team designs every detail — stays, transfers, experiences, and hidden gems — tailored to your rhythm and interests.</p>
+            </div>
+            <div class="step fade-in">
+                <div class="step-number">3</div>
+                <h3>You Arrive & Everything Moves</h3>
+                <p>Step into Zimbabwe and let the journey unfold. We handle the details so you can embrace the moments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="fade-in">
+            <h2>Ready to discover something different?</h2>
+            <p>Zimbabwe is waiting — not just to be seen, but to be felt. Let us craft your journey.</p>
+            <div class="cta-buttons">
+                <a href="#booking" class="btn btn-primary">Explore Experiences</a>
+                <a href="https://wa.me/263787105817" target="_blank" class="btn btn-whatsapp">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.72 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    Speak to Us
+                </a>
+                <a href="#booking" class="btn btn-outline">Plan Your Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>HiddenZimbabwe</h3>
+                <p>Curated travel and MICE experiences across Zimbabwe. Discovering hidden gems, heritage, nature, and city escapes with depth, belonging, and pulse.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1aZFurd5sj/" target="_blank" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/hiddenzimbabwe/" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#stays">Hidden Stays</a></li>
+                    <li><a href="#mice">MICE & Corporate</a></li>
+                    <li><a href="#journal">Journal</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#mice">Corporate Travel</a></li>
+                    <li><a href="#partners">For Partners</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:hello@hiddenzimbabwe.com">hello@hiddenzimbabwe.com</a></li>
+                    <li><a href="https://wa.me/263787105817" target="_blank">WhatsApp: +263 787 105 817</a></li>
+                    <li><a href="#">Harare, Zimbabwe</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> HiddenZimbabwe. All rights reserved. | Curated Travel & MICE Experiences</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/263787105817" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <span class="whatsapp-label">Chat with our Concierge</span>
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.72 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Booking form handler
+        function handleBooking(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            // Build WhatsApp message
+            const message = `Hello HiddenZimbabwe,%0A%0AI'm interested in booking a curated experience.%0A%0A*Details:*%0A• Name: ${data.name}%0A• Email: ${data.email}%0A• Phone: ${data.phone}%0A• Arrival: ${data.arrival}%0A• Departure: ${data.departure}%0A• Travel Type: ${data.travel_type}%0A• Guests: ${data.guests}%0A• Destination: ${data.destination || 'Help me decide'}%0A• Rooms: ${data.rooms || 'Not specified'}%0A%0A*Message:*%0A${data.message || 'No additional message'}%0A%0APlease confirm availability.`;
+            
+            // Open WhatsApp with pre-filled message
+            window.open(`https://wa.me/263787105817?text=${message}`, '_blank');
+        }
+
+        // Set minimum date for booking inputs to today
+        const today = new Date().toISOString().split('T')[0];
+        document.querySelectorAll('input[type="date"]').forEach(input => {
+            input.setAttribute('min', today);
+        });
+    </script>
+</body>
+</html>
